@@ -1,0 +1,44 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+#warp{max-width: 1400px; margin: 0 auto; padding: 50px;}
+.none{display: none;}
+
+table{border-collapse: collapse;}
+td{position: relative;}
+
+
+#fish{border: 1px solid #333; font-size: 20px; display: flex;}
+#fish::-webkit-scrollbar{display: none;}
+#fish td{height: 35px; display: inline-block; line-height: 34px; padding: 0 3px; border: 1px solid #888;}
+
+#item{margin-top: 50px; font-size: 18px;}
+#item>div{display: flex;}
+.data{width: 250px; font-size: 20px; display: flex; border-right: 1px solid #333; padding: 3px; overflow: hidden;}
+#item .data label{width: 30px; height: 30px; display: block; margin-right: 5px; border: 1px solid #aaa;}
+#item .data .name{overflow: hidden; white-space: nowrap; width: calc(100% - 90px); margin-right: 5px; font-size: 18px; line-height: 30px; position: relative;}
+#item .data .count{width: 50px; border: 1px solid #555; font-size: 18px; padding: 1px 2px; text-align: right; position: relative;}
+#item>div{border: 1px solid #333;}
+#item>div+div{border-top: none;}
+.fishes{width: calc(100% - 250px); overflow: auto; white-space: nowrap;}
+.fishes::-webkit-scrollbar{display: none;}
+.fishes *{height: 100%;}
+.fishes td{display: inline-block; height: 37px; text-align: right; font-size: 18px; padding: 0 4px; line-height: 35px; border: 1px solid #aaa;}
+
+#other{margin-top: 50px;}
+#other>div{border: 1px solid #333; display: flex;}
+#other>div+div{border-top: none;}
+
+input:checked+label{position: relative;}
+input:checked+label::before, input:checked+label::after{content: ""; display: block; width: 4px; background: #5f5; bottom: 7px; left: 35%; position: absolute; transform-origin: 50% calc(100% - 2px);}
+input:checked+label::after{height: 10px; transform: rotate(-45deg);}
+input:checked+label::before{height: 18px; transform: rotate(45deg);}
+
+#menu{position: absolute; left: 30%; top: 30%; background: #ddd; border: 1px solid #888; width: 200px;}
+#menu>div{padding: 5px; font-size: 14px;}
+
+#controller{width: 100%; display: flex; height: 37px; margin-top: 50px; justify-content: space-around;}
+#controller>div{height: 37px; border: 1px solid #aaa; padding: 0 5px; font-size: 18px; line-height: 35px; cursor: pointer;}
+
+input[type="text"], input[type="number"]{width: calc(100% - 6px); height: 100%; font-size: 18px; border: none; outline: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: none;}
+input[type="number"]{text-align: right;}
+
+.color{color:#ffa9bc;}
